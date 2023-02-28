@@ -35,4 +35,7 @@ public class GameField {
     public void setDisplayObject(DisplayObject displayObject) {
         this.displayObject = displayObject;
     }
+    public void checkFinish(){
+
+    }
 }
