@@ -1,10 +1,29 @@
 public class Game {
-    public static void main(String[] args) {
-        start();
-    }
-
-    public static void start()
+    GameField gameField;
+    PlayerCollection playerCollection;
+    public void startGame()
     {
 
     }
+    public void exitGame()
+    {
+
+    }
+    public void pauseGame()
+    {
+
+    }
+    public void resumeGame()
+    {
+
+    }
+    public void saveGame()
+    {
+
+    }
+    public void loadGame()
+    {
+
+    }
+
 }

@@ -1,23 +1,38 @@
 public class GameField {
-    private float width;
-    private float height;
-    private Blocks[] blocks;
-    private Players[] players;
+    int width;
+    int height;
+    DisplayObject displayObject;
+    int background;
 
-    public GameField(float width, float height, Blocks[] blocks, Players[] players)
-    {
-        this.width=width;
-        this.height=height;
-        this.blocks=blocks;
-        this.players=players;
-    }
-    void playerAddition()
-    {
-
+    public int getWidth() {
+        return width;
     }
 
-    void showEndMessage ()
-    {
+    public void setWidth(int width) {
+        this.width = width;
+    }
 
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getBackground() {
+        return background;
+    }
+
+    public void setBackground(int background) {
+        this.background = background;
+    }
+
+    public DisplayObject getDisplayObject() {
+        return displayObject;
+    }
+
+    public void setDisplayObject(DisplayObject displayObject) {
+        this.displayObject = displayObject;
     }
 }
