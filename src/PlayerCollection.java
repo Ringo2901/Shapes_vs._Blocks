@@ -1,5 +1,6 @@
 public class PlayerCollection {
     Player players[];
+    FullStatistics fullStatistics;
     public Player getPlayer(int index) {
         return null;
     }

@@ -1,14 +1,5 @@
-public class BonusCollection extends GameObject{
+public class BonusCollection{
     Bonus bonuses[];
-    @Override
-    public void isCollidingWith(GameObject object) {
-
-    }
-
-    @Override
-    public void render() {
-
-    }
 
     public void addBonus(Bonus bonus){
 
@@ -16,5 +7,9 @@ public class BonusCollection extends GameObject{
     public void removeBonus(Bonus bonus)
     {
 
+    }
+    public Bonus getBonus(int index)
+    {
+        return null;
     }
 }

@@ -1,16 +1,7 @@
 import java.awt.*;
 
-public class Bonus extends DisplayObject {
-    int type;
-
-    public int getType() {
-        return type;
-    }
-
-    public void setType(int type) {
-        this.type = type;
-    }
-
+public class MessageBox extends DisplayObject {
+    String message;
     @Override
     public boolean isCollidingWith(DisplayObject object) {
         return false;
@@ -25,4 +16,5 @@ public class Bonus extends DisplayObject {
     public void move() {
 
     }
+
 }
