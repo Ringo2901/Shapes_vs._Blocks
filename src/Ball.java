@@ -1,6 +1,6 @@
 import java.awt.*;
 
-import static java.lang.Math.abs;
+import static java.lang.Math.*;
 
 public class Ball extends DisplayObject {
     int speed;
@@ -34,10 +34,12 @@ public class Ball extends DisplayObject {
     public boolean isCollidingWith(DisplayObject object) {
         int x1 = getX1(); int x2 = getX2();
         int coordx = abs((x1 - x2)) /2;
-        int coordy = getY1();
-        int x3 = object.getX1(); int x4 = object.getX2(); int y3 = object.getY1(); int y4 = object.getY2();
-        if (coordy >= y4 && coordy <=y3)
+        int coordy = min(getY1(),getY2());
+        int x3 = min(object.getX1(),object.getX2()); int x4 = max(object.getX1(),object.getX2()); int y3 = min(object.getY1(), object.getY2()); int y4 = max(object.getY1(), object.getY2());
+        if (coordy <= y4 && coordy >=y3)
         {
+            System.out.println(""+ coordx + " "+ coordy + " "+ x3+ " " + x4+ " " + y3+ " " + y4);
+            System.out.println(coordx >= x3 && coordy <= x4);
             return coordx >= x3 && coordy <= x4;
         }
         return false;

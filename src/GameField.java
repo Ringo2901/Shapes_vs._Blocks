@@ -18,31 +18,8 @@ public class GameField extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1000, 1000);
         setVisible(true);
-        gameDriver();
+        displayCollection.gameDriver();
 
-    }
-    public int gameDriver() throws InterruptedException {
-        while (true)
-        {
-            for (DisplayObject object: displayCollection.allObjects)
-            {
-                object.move();
-                for (DisplayObject object2: displayCollection.allObjects)
-                {
-                    if (object.equals(object2)) continue;
-                    if (object.isCollidingWith(object2))
-                    {
-                        object2.setX1(0);
-                        object2.setX2(0);
-                        object2.setY1(0);
-                        object2.setY2(0);
-                    }
-
-                }
-            }
-            displayCollection.repaint();
-            Thread.sleep(200);
-        }
     }
     public int getBackgroundColor() {
         return background;
